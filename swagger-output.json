@@ -1,0 +1,197 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "hiking-trails.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "trail",
+            "in": "body",
+            "description": "Insert a new Trail",
+            "required": true,
+            "format": "json",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "New Trail Name"
+                },
+                "location": {
+                  "type": "string",
+                  "example": "Location"
+                },
+                "distance": {
+                  "type": "string",
+                  "example": "Distance"
+                },
+                "elevationGain": {
+                  "type": "string",
+                  "example": "Net Elevation Gain"
+                },
+                "elevationLoss": {
+                  "type": "string",
+                  "example": "Net Elevation Loss"
+                },
+                "lastHiked": {
+                  "type": "string",
+                  "example": "Date Last Hiked"
+                },
+                "comments": {
+                  "type": "string",
+                  "example": "Comments about the hike."
+                }
+              },
+              "required": [
+                "name",
+                "location",
+                "distance",
+                "elevationGain",
+                "elevationLoss",
+                "lastHiked",
+                "comments"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/{_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Select and update a specific contact",
+            "format": "hex"
+          },
+          {
+            "name": "trail",
+            "in": "body",
+            "description": "Updated trail data",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "New Trail Name"
+                },
+                "location": {
+                  "type": "string",
+                  "example": "Location"
+                },
+                "distance": {
+                  "type": "string",
+                  "example": "Distance"
+                },
+                "elevationGain": {
+                  "type": "string",
+                  "example": "Net Elevation Gain"
+                },
+                "elevationLoss": {
+                  "type": "string",
+                  "example": "Net Elevation Loss"
+                },
+                "lastHiked": {
+                  "type": "string",
+                  "example": "Date Last Hiked"
+                },
+                "comments": {
+                  "type": "string",
+                  "example": "Comments about the hike."
+                }
+              },
+              "required": [
+                "name",
+                "location",
+                "distance",
+                "elevationGain",
+                "elevationLoss",
+                "lastHiked",
+                "comments"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}
