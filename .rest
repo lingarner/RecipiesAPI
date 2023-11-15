@@ -1,0 +1,44 @@
+// LOCALHOST
+
+// get all breakfast, lunch, dinner, dessert 
+### breakfast
+GET http://localhost:8080/breakfast HTTP/1.1
+
+// get a breakfast by ID
+### 
+GET http://localhost:8080/breakfast/6553f6855f9d2830f33ba5d2
+### 
+GET http://localhost:8080/breakfast/6553f6855f9d2830f33ba5d3
+### 
+GET http://localhost:8080/breakfast/6553f6855f9d2830f33ba5d4
+###
+GET http://localhost:8080/breakfast/6553f6855f9d2830f33ba5d5
+###
+GET http://localhost:8080/breakfast/6553f6855f9d2830f33ba5d6
+
+
+### lunch
+GET http://localhost:8080/lunch HTTP/1.1
+
+### dinner
+GET http://localhost:8080/dinner HTTP/1.1
+
+### dessert
+GET http://localhost:8080/dessert HTTP/1.1
+
+
+// RENDER
+
+// get all breakfast, lunch, dinner, dessert 
+
+### breakfast
+GET http://recipesapi-2dkf.onrender.com/breakfast HTTP/1.1
+
+### lunch
+GET http:/recipesapi-2dkf.onrender.com/lunch HTTP/1.1
+
+### dinner
+GET http://recipesapi-2dkf.onrender.com/dinner HTTP/1.1
+
+### dessert
+GET http://recipesapi-2dkf.onrender.com/dessert HTTP/1.1

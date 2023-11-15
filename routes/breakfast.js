@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const baseController = '../controllers/baseController.js'
+const baseController = require('../controllers/baseController.js');
 
 // get breakfast by id
-//router.get('/:id', baseController.getSingle);
+router.get('/:id', baseController.getSingle);
 
 // get all breakfast
 router.get('/', baseController.getAll);

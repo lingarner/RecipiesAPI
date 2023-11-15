@@ -21,12 +21,42 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/breakfast/{id}": {
       "get": {
-        "description": "",
+        "description": "Get all the accounts",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/breakfast/": {
+      "get": {
+        "description": "Get all the accounts",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
