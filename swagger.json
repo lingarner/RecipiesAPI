@@ -1,11 +1,10 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
   "info": {
     "title": "Recipe API",
     "description": "Recipe API for Team Project ",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
   "servers": [
     {
       "url": "http://localhost:8080/",
@@ -16,23 +15,18 @@
       "description": "Live server"
     }
   ],
-  "basePath": "/",
-  "schemes": [
-    "http"
-  ],
   "paths": {
     "/breakfast/{id}": {
       "get": {
         "description": "Get all the accounts",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -48,9 +42,6 @@
     "/breakfast/": {
       "get": {
         "description": "Get all the accounts",
-        "produces": [
-          "application/json"
-        ],
         "responses": {
           "200": {
             "description": "OK"
