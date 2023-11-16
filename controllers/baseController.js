@@ -2,7 +2,7 @@ const mongodb = require('../db/connection');
 const ObjectId = require('mongodb').ObjectId;
 
 async function getAll(req, res) {
-    // #swagger.description = 'Get all the accounts'
+    // #swagger.description = 'Get all the recipes'
     const result = await mongodb.getDb().db('recipies').collection('breakfast').find();
     result.toArray().then((lists) => {
         if(lists) {
@@ -16,8 +16,9 @@ async function getAll(req, res) {
 }
 
 async function getSingle(req, res) {
-    // #swagger.description = 'Get all the accounts'
-    const result = await mongodb.getDb().db('recipies').collection('breakfast').find();
+    // #swagger.description = 'Get one recipe'
+    const id = new ObjectId(req.params.id);
+    const result = await mongodb.getDb().db('recipies').collection('breakfast').find({_id:id});
     result.toArray().then((lists) => {
         if(lists) {
             res.setHeader('Content-Type', 'application/json');

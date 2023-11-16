@@ -18,7 +18,7 @@
   "paths": {
     "/breakfast/{id}": {
       "get": {
-        "description": "Get all the accounts",
+        "description": "Get one recipe",
         "parameters": [
           {
             "name": "id",
@@ -41,7 +41,7 @@
     },
     "/breakfast/": {
       "get": {
-        "description": "Get all the accounts",
+        "description": "Get all the recipes",
         "responses": {
           "200": {
             "description": "OK"
