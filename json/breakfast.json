@@ -1,47 +1,47 @@
 [
-    {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- }
+   {
+       "ingredients": "2 eggs, 1/4 cup milk, 1/4 teaspoon salt, 1/4 teaspoon pepper, 1 tablespoon butter",
+       "recipeTitle": "Scrambled Eggs",
+       "prepTimeorbakingTime": "10 minutes",
+       "comments": "A classic breakfast favorite!",
+       "author": "Chef Breakfast Lover",
+       "instructions": "1. In a bowl, beat the eggs with milk, salt, and pepper...\n2. Heat butter in a non-stick skillet over medium-low heat...\n3. Pour the egg mixture into the skillet and stir constantly until cooked to your liking...",
+       "utensils":  "Skillet, bowl, spatula"
+   },
+   {
+       "ingredients": "1 cup oats, 1 cup milk, 1/2 banana, 1 tablespoon honey, 1/4 cup chopped nuts",
+       "recipeTitle": "Banana Nut Oatmeal",
+       "prepTimeorbakingTime": "15 minutes",
+       "comments": "A wholesome and filling breakfast!",
+       "author": "HealthyEats123",
+       "instructions": "1. In a saucepan, combine oats and milk...\n2. Mash the banana and add it to the oat mixture...\n3. Cook over medium heat, stirring occasionally, until the oats are tender and the mixture thickens...\n4. Drizzle with honey and sprinkle with chopped nuts before serving.",
+       "utensils":  "Saucepan, spoon"
+   },
+   {
+       "ingredients": "2 slices of bread, 2 eggs, 2 slices of bacon, 1 slice of cheese, butter",
+       "recipeTitle": "Bacon and Egg Breakfast Sandwich",
+       "prepTimeorbakingTime": "15 minutes",
+       "comments": "A delicious grab-and-go breakfast!",
+       "author": "BreakfastFanatic",
+       "instructions": "1. Cook the bacon in a skillet until crispy...\n2. In the same skillet, fry the eggs to your preference...\n3. Butter one side of each bread slice...\n4. Assemble the sandwich with bacon, eggs, and cheese between the bread slices...\n5. Toast the sandwich in a pan until the bread is golden and the cheese melts.",
+       "utensils":  "Skillet, pan"
+   },
+   {
+       "ingredients": "1 cup Greek yogurt, 1/2 cup granola, 1/2 cup mixed berries, 1 tablespoon honey",
+       "recipeTitle": "Greek Yogurt Parfait",
+       "prepTimeorbakingTime": "5 minutes",
+       "comments": "A quick and healthy breakfast option!",
+       "author": "YogurtLover",
+       "instructions": "1. In a glass or bowl, layer Greek yogurt, granola, and mixed berries...\n2. Drizzle with honey...",
+       "utensils":  "Glass or bowl, spoon"
+   },
+   {
+       "ingredients": "2 slices of whole-grain toast, 1 avocado, 2 poached eggs, salt, pepper, red pepper flakes",
+       "recipeTitle": "Avocado Toast with Poached Eggs",
+       "prepTimeorbakingTime": "20 minutes",
+       "comments": "A trendy and nutritious breakfast choice!",
+       "author": "AvocadoEnthusiast",
+       "instructions": "1. Toast the whole-grain bread slices...\n2. Mash the avocado and spread it on the toasted bread...\n3. Top each slice with a poached egg...\n4. Season with salt, pepper, and a pinch of red pepper flakes to taste...",
+       "utensils":  "Toaster, poaching pan"
+   }
 ]

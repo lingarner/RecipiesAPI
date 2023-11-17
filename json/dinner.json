@@ -1,47 +1,47 @@
 [
-    {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- }
+   {
+       "ingredients": "4 boneless chicken thighs, 2 tablespoons olive oil, 1 onion, 2 cloves garlic, 1 can diced tomatoes, 1 teaspoon dried oregano, 1/2 teaspoon dried basil, salt, pepper, 1/4 cup grated Parmesan cheese, fresh basil leaves for garnish",
+       "recipeTitle": "Chicken Tomato Skillet",
+       "prepTimeorbakingTime": "30 minutes",
+       "comments": "A simple and flavorful dinner option!",
+       "author": "DinnerChef",
+       "instructions": "1. Season chicken thighs with salt and pepper...\n2. In a large skillet, heat olive oil over medium heat...\n3. Add chicken thighs and cook until browned on both sides and cooked through...\n4. Remove chicken from skillet and set aside...\n5. In the same skillet, add chopped onion and minced garlic, sauté until fragrant...\n6. Add diced tomatoes, dried oregano, and dried basil to the skillet...\n7. Return chicken to the skillet and simmer for 10 minutes...\n8. Sprinkle with grated Parmesan cheese and garnish with fresh basil leaves before serving...",
+       "utensils":  "Large skillet, knife, cutting board"
+   },
+   {
+       "ingredients": "1 pound spaghetti, 2 tablespoons olive oil, 4 cloves garlic, 1/4 teaspoon red pepper flakes, 1 can crushed tomatoes, salt, pepper, 1/4 cup fresh basil leaves, grated Parmesan cheese",
+       "recipeTitle": "Spaghetti Aglio e Olio",
+       "prepTimeorbakingTime": "20 minutes",
+       "comments": "A classic Italian pasta dish!",
+       "author": "ItalianFoodie",
+       "instructions": "1. Cook spaghetti according to package instructions...\n2. In a skillet, heat olive oil over low heat...\n3. Add minced garlic and red pepper flakes, sauté until fragrant...\n4. Stir in crushed tomatoes, salt, and pepper...\n5. Simmer for 10 minutes...\n6. Toss cooked spaghetti in the sauce...\n7. Garnish with fresh basil leaves and grated Parmesan cheese before serving...",
+       "utensils":  "Skillet, pot, colander"
+   },
+   {
+       "ingredients": "1 pound ground beef, 1 onion, 2 cloves garlic, 1 can black beans, 1 can corn, 1 can diced tomatoes, 1 packet taco seasoning, tortilla chips, shredded cheese, sour cream, salsa",
+       "recipeTitle": "Beef Nachos",
+       "prepTimeorbakingTime": "25 minutes",
+       "comments": "A tasty and satisfying dinner for nacho lovers!",
+       "author": "NachoFanatic",
+       "instructions": "1. In a skillet, cook ground beef with chopped onion and minced garlic until browned...\n2. Drain excess fat...\n3. Add black beans, corn, diced tomatoes, and taco seasoning...\n4. Simmer for 10 minutes...\n5. Arrange tortilla chips on a baking sheet...\n6. Spoon the beef mixture over the chips...\n7. Sprinkle with shredded cheese...\n8. Bake in the oven until cheese is melted...\n9. Serve with sour cream and salsa...",
+       "utensils":  "Skillet, baking sheet, oven"
+   },
+   {
+       "ingredients": "4 salmon fillets, 1/4 cup honey, 2 tablespoons soy sauce, 2 tablespoons Dijon mustard, 1 clove garlic, salt, pepper, lemon wedges",
+       "recipeTitle": "Honey Mustard Salmon",
+       "prepTimeorbakingTime": "20 minutes",
+       "comments": "A healthy and delicious seafood dinner!",
+       "author": "SeafoodLover",
+       "instructions": "1. Preheat oven to 375°F (190°C)...\n2. In a small bowl, whisk together honey, soy sauce, Dijon mustard, minced garlic, salt, and pepper...\n3. Place salmon fillets on a baking sheet...\n4. Brush the honey mustard mixture over the salmon...\n5. Bake in the oven for 15-20 minutes or until salmon flakes easily...\n6. Serve with lemon wedges...",
+       "utensils":  "Baking sheet, bowl, whisk"
+   },
+   {
+       "ingredients": "1 cup rice, 1 pound shrimp, 1/2 cup diced bell peppers, 1/2 cup diced zucchini, 1/2 cup diced onions, 2 cloves garlic, 2 tablespoons olive oil, 2 tablespoons soy sauce, salt, pepper",
+       "recipeTitle": "Shrimp Stir-Fry with Rice",
+       "prepTimeorbakingTime": "25 minutes",
+       "comments": "A quick and flavorful seafood stir-fry!",
+       "author": "StirFryChef2",
+       "instructions": "1. Cook rice according to package instructions...\n2. In a wok or large skillet, heat olive oil over high heat...\n3. Add minced garlic and diced onions, stir-fry for 1-2 minutes...\n4. Add diced bell peppers and zucchini, stir-fry for another 2-3 minutes...\n5. Add shrimp and soy sauce, stir-fry until shrimp are pink and cooked through...\n6. Season with salt and pepper...\n7. Serve over cooked rice...",
+       "utensils":  "Wok or skillet, pot"
+   }
 ]

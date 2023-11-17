@@ -1,47 +1,47 @@
 [
-    {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- },
- {
-    "Ingredients": "string",
-    "Recipe Title": "string",
-    "Preptime/Baking time": "string",
-    "Comments": "string",
-    "Author": "string",
-    "Instructions": "string",
-    "Utensils":  "string" 
- }
+   {
+       "ingredients": "2 cups cooked pasta, 1/2 cup cherry tomatoes, 1/4 cup fresh basil leaves, 2 tablespoons olive oil, 1 clove garlic, salt, pepper",
+       "recipeTitle": "Caprese Pasta Salad",
+       "prepTimeorbakingTime": "15 minutes",
+       "comments": "A refreshing and easy-to-make lunch!",
+       "author": "LunchLover123",
+       "instructions": "1. In a large bowl, combine cooked pasta, cherry tomatoes, and fresh basil leaves...\n2. In a small bowl, whisk together olive oil, minced garlic, salt, and pepper...\n3. Drizzle the dressing over the pasta mixture and toss to combine...",
+       "utensils":  "Large bowl, small bowl, whisk"
+   },
+   {
+       "ingredients": "2 slices of bread, 4 slices of turkey, 2 slices of Swiss cheese, 1/4 cup lettuce, 2 tablespoons mayonnaise, 1 tablespoon mustard",
+       "recipeTitle": "Turkey and Swiss Sandwich",
+       "prepTimeorbakingTime": "10 minutes",
+       "comments": "A classic and satisfying sandwich!",
+       "author": "SandwichMaster",
+       "instructions": "1. Spread mayonnaise and mustard on one slice of bread...\n2. Layer turkey, Swiss cheese, and lettuce on top...\n3. Place the other slice of bread on top to make a sandwich...",
+       "utensils":  "Knife, plate"
+   },
+   {
+       "ingredients": "1 cup quinoa, 2 cups water, 1 cup diced cucumber, 1 cup diced red bell pepper, 1/2 cup chopped fresh parsley, 1/4 cup feta cheese, 2 tablespoons lemon juice, 2 tablespoons olive oil",
+       "recipeTitle": "Mediterranean Quinoa Salad",
+       "prepTimeorbakingTime": "20 minutes",
+       "comments": "A healthy and flavorful salad for lunch!",
+       "author": "HealthyEats456",
+       "instructions": "1. Rinse quinoa under cold water and cook according to package instructions...\n2. In a large bowl, combine cooked quinoa, cucumber, red bell pepper, fresh parsley, and feta cheese...\n3. In a small bowl, whisk together lemon juice and olive oil, then drizzle it over the salad and toss to combine...",
+       "utensils":  "Large bowl, small bowl, whisk"
+   },
+   {
+       "ingredients": "2 boneless chicken breasts, 1 cup broccoli florets, 1/2 cup diced carrots, 1/2 cup diced bell peppers, 2 tablespoons soy sauce, 1 tablespoon sesame oil",
+       "recipeTitle": "Chicken Stir-Fry",
+       "prepTimeorbakingTime": "25 minutes",
+       "comments": "A quick and satisfying lunch option!",
+       "author": "StirFryChef",
+       "instructions": "1. Cut chicken into bite-sized pieces and stir-fry in a hot skillet until cooked through...\n2. Add broccoli, carrots, and bell peppers to the skillet and stir-fry until they're tender...\n3. Drizzle soy sauce and sesame oil over the stir-fry, and toss to combine...",
+       "utensils":  "Skillet, spatula"
+   },
+   {
+       "ingredients": "2 slices of whole-grain bread, 1/2 avocado, 1/2 cup sliced cucumber, 1/2 cup sliced tomato, 1/4 cup hummus, salt, pepper",
+       "recipeTitle": "Avocado and Hummus Sandwich",
+       "prepTimeorbakingTime": "10 minutes",
+       "comments": "A healthy and delicious vegetarian sandwich!",
+       "author": "VeggieEater",
+       "instructions": "1. Mash the avocado and spread it on one slice of bread...\n2. Spread hummus on the other slice of bread...\n3. Layer cucumber and tomato slices on one side...\n4. Season with salt and pepper...\n5. Close the sandwich and enjoy!",
+       "utensils":  "Knife, plate"
+   }
 ]
