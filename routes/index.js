@@ -1,7 +1,7 @@
 const routes = require('express').Router();
 const breakfast = require('./breakfast');
-// const lunch = require('./lunch');
-// const dinner = require('./dinner');
+const lunch = require('./lunch');
+const dinner = require('./dinner');
 const dessert = require('./dessert');
 // const swagger = require('./swagger.js');
 
@@ -12,8 +12,8 @@ const dessert = require('./dessert');
 
 routes.use('/breakfast', breakfast);
 routes.use('/dessert', dessert);
-// routes.use('/lunch', lunch);
-// routes.use('/dinner', dinner);
+routes.use('/lunch', lunch);
+routes.use('/dinner', dinner);
 // routes.use('/', swagger);
 
 module.exports = routes;
