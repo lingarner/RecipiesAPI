@@ -15,7 +15,7 @@ router.get('/', baseController.getAll);
 //router.put('/:id', baseController.updateAuthor);
 
 // remove a breakfast by id 
-//router.delete('/:id', baseController.deleteAuthor);
+router.delete('/:id', baseController.deleteAuthor);
 
 
 module.exports = router;
