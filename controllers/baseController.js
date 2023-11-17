@@ -20,7 +20,7 @@ async function getSingle(req, res) {
     const id = new ObjectId(req.params.id);
     const result = await mongodb.getDb().db('recipies').collection(req.baseUrl.substring(1)).find({_id:id});
     result.toArray().then((lists) => {
-        if(lists) {
+        if(lists.empty) {
             res.setHeader('Content-Type', 'application/json');
             res.status(200).json(lists);
         } else {
@@ -29,14 +29,14 @@ async function getSingle(req, res) {
     });
 }
 
-async function deleteRecipe(req, res){
+async function deleteSingle(req, res){
     const id = new ObjectId(req.params.id);
-    const result = await mongodb.getDb().db('recipies').collection('breakfast').deleteOne({_id:id});
+    const result = await mongodb.getDb().db('recipies').collection(req.baseUrl.substring(1)).deleteOne({_id:id});
     if(result) {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } else {
-        res.status(500).json(reesult || 'Something went wrong');
+        res.status(500).json(result || 'Something went wrong');
     }
 };
 
@@ -44,4 +44,4 @@ async function deleteRecipe(req, res){
 
 
 
-module.exports = {getAll, getSingle, deleteRecipe}
+module.exports = {getAll, getSingle, deleteSingle}
