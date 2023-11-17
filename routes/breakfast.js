@@ -9,10 +9,10 @@ router.get('/:id', baseController.getSingle);
 router.get('/', baseController.getAll);
 
 // create a new breakfast
-//router.post('/', baseController.createAuthor);
+router.post('/', baseController.addSingle);
 
-// update a bobreakfastok by id 
-//router.put('/:id', baseController.updateAuthor);
+// update a breakfast by id 
+router.put('/:id', baseController.editSingle);
 
 // remove a breakfast by id 
 router.delete('/:id', baseController.deleteSingle);

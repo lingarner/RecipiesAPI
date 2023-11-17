@@ -11,9 +11,9 @@ const dessert = require('./dessert');
 //});
 
 routes.use('/breakfast', breakfast);
-routes.use('/dessert', dessert);
 routes.use('/lunch', lunch);
 routes.use('/dinner', dinner);
+routes.use('/dessert', dessert);
 // routes.use('/', swagger);
 
 module.exports = routes;

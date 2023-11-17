@@ -38,8 +38,58 @@
           }
         }
       },
+      "put": {
+        "description": "Edit one recipe",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
-        "description": "",
+        "description": "Delete one recipe",
         "parameters": [
           {
             "name": "id",
@@ -71,61 +121,44 @@
             "description": "Internal Server Error"
           }
         }
-      }
-    },
-    "/dessert/{id}": {
-      "get": {
-        "description": "Get one recipe",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
       },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
+      "post": {
+        "description": "Add one recipe",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
             }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/dessert/": {
-      "get": {
-        "description": "Get all the recipes",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
@@ -152,8 +185,58 @@
           }
         }
       },
+      "put": {
+        "description": "Edit one recipe",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
-        "description": "",
+        "description": "Delete one recipe",
         "parameters": [
           {
             "name": "id",
@@ -185,6 +268,46 @@
             "description": "Internal Server Error"
           }
         }
+      },
+      "post": {
+        "description": "Add one recipe",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/dinner/{id}": {
@@ -209,8 +332,58 @@
           }
         }
       },
+      "put": {
+        "description": "Edit one recipe",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
-        "description": "",
+        "description": "Delete one recipe",
         "parameters": [
           {
             "name": "id",
@@ -240,6 +413,193 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Add one recipe",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dessert/{id}": {
+      "get": {
+        "description": "Get one recipe",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "Edit one recipe",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete one recipe",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/dessert/": {
+      "get": {
+        "description": "Get all the recipes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Add one recipe",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ingredients": {
+                    "example": "any"
+                  },
+                  "RecipeTitle": {
+                    "example": "any"
+                  },
+                  "prepTimeorbakingTime": {
+                    "example": "any"
+                  },
+                  "comments": {
+                    "example": "any"
+                  },
+                  "instructions": {
+                    "example": "any"
+                  },
+                  "utensils": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
           }
         }
       }

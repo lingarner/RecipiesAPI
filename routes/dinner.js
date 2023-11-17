@@ -8,6 +8,12 @@ router.get('/:id', baseController.getSingle);
 // get all dinners
 router.get('/', baseController.getAll);
 
+// create a new dinner
+router.post('/', baseController.addSingle);
+
+// update a dinner by id 
+router.put('/:id', baseController.editSingle);
+
 // delete one dinner
 router.delete('/:id', baseController.deleteSingle)
 
