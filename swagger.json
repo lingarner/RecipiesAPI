@@ -64,7 +64,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
@@ -138,7 +138,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
@@ -208,7 +208,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
@@ -282,7 +282,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
@@ -352,7 +352,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
@@ -426,7 +426,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
@@ -496,7 +496,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
@@ -570,7 +570,7 @@
                   "ingredients": {
                     "example": "any"
                   },
-                  "RecipeTitle": {
+                  "recipeTitle": {
                     "example": "any"
                   },
                   "prepTimeorbakingTime": {
