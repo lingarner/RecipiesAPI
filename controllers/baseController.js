@@ -18,6 +18,9 @@ async function getAll(req, res) {
 
 async function getSingle(req, res) {
     // #swagger.description = 'Get one recipe'
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid id to find an author.');
+    }
     const id = new ObjectId(req.params.id);
     console.log(id)
     const result = await mongodb.getDb().db('recipies').collection(req.baseUrl.substring(1)).findOne({_id:id});
@@ -30,6 +33,9 @@ async function getSingle(req, res) {
 
 async function deleteSingle(req, res){
     // #swagger.description = 'Delete one recipe'
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid id to find an author.');
+    }
     try {
         const id = new ObjectId(req.params.id);
         const result = await mongodb.getDb().db('recipies').collection(req.baseUrl.substring(1)).deleteOne({_id:id});
@@ -68,6 +74,9 @@ async function addSingle(req, res){
 
 async function editSingle(req, res){
     // #swagger.description = 'Edit one recipe'
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid id to find an author.');
+    }
     try {
         const recipe = {
             ingredients: req.body.ingredients, 
