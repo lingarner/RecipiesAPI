@@ -19,15 +19,13 @@ async function getAll(req, res) {
 async function getSingle(req, res) {
     // #swagger.description = 'Get one recipe'
     const id = new ObjectId(req.params.id);
-    const result = await mongodb.getDb().db('recipies').collection(req.baseUrl.substring(1)).find({_id:id});
-    result.toArray().then((lists) => {
-        if(lists.empty) {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-        } else {
-            res.status(500).json(result || 'Something went wrong');
-        }
-    });
+    console.log(id)
+    const result = await mongodb.getDb().db('recipies').collection(req.baseUrl.substring(1)).findOne({_id:id});
+    if(result){
+        res.status(200).send(result)
+    } else{
+        throw new Error('Some error occurred while getting that recipe.')
+    }
 }
 
 async function deleteSingle(req, res){
