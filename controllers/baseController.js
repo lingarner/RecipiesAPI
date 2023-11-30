@@ -48,7 +48,7 @@ async function addSingle(req, res){
     try {
         const recipe = {
             ingredients: req.body.ingredients, 
-            RecipeTitle: req.body.RecipeTitle, 
+            recipeTitle: req.body.recipeTitle, 
             prepTimeorbakingTime: req.body.prepTimeorbakingTime, 
             comments: req.body.comments, 
             instructions: req.body.instructions, 
@@ -71,7 +71,7 @@ async function editSingle(req, res){
     try {
         const recipe = {
             ingredients: req.body.ingredients, 
-            RecipeTitle: req.body.RecipeTitle, 
+            recipeTitle: req.body.recipeTitle, 
             prepTimeorbakingTime: req.body.prepTimeorbakingTime, 
             comments: req.body.comments, 
             instructions: req.body.instructions, 
