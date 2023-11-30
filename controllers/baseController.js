@@ -70,10 +70,10 @@ async function editSingle(req, res){
         if(result){
             res.status(200).send(result)
         } else{
-            throw new Error('Some error occurred while deleting that recipe.')
+            throw new Error('Some error occurred while editing that recipe.')
         }
     } catch (error){
-      res.status(500).json(error.message || 'Some error occurred while deleting that recipe.')
+      res.status(500).json(error.message || 'Some error occurred while editing that recipe.')
     }
 };
 
