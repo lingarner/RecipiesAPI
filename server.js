@@ -7,29 +7,41 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 require('dotenv').config();
 const cors = require('cors');
-// const { auth: auth2 } = require("express-openid-connect");
 
-// const config = {
-//   authRequired: false,
-//   auth0Logout: true,
-//   secret: process.env.SECRET,
-//   baseURL: process.env.BASEURL,
-//   clientID: process.env.CLIENTID,
-//   issuerBaseURL: process.env.ISSUER,
-// };
+
+// Auth0 authentication process
+const { auth } = require('express-openid-connect');
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: 'https://recipesapi-2dkf.onrender.com',
+  clientID: '33WXz5xVS0de9dJmZjRrJLFPyZXVlFlh',
+  issuerBaseURL: 'https://dev-4ha050c0hqua8uiq.us.auth0.com'
+};
+
 // auth router attaches /login, /logout, and /callback routes to the baseURL
-// app.use(auth2(config));
-// ////////// The end of new lines
+app.use(auth(config));
 
-// const checkAuth = (req, res, next) => {
-//   if (!req.oidc.isAuthenticated()) {
-//     return res.status(401).send('Unauthorized. Please log in');
-//   }
-//   next()
-//   // res.send(JSON.stringify(req.oidc.user));
-// }
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// req.isAuthenticated is provided from the auth router
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
+// END AUTH0 PROCESS
+
+const checkAuth = (req, res, next) => {
+  if (!req.oidc.isAuthenticated()) {
+    return res.status(401).send('Unauthorized. Please log in');
+  }
+  next()
+  // res.send(JSON.stringify(req.oidc.user));
+}
+
+
+app.use('/api-docs', checkAuth, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app
   .use(bodyParser.json())
   .use((req, res, next) => {
@@ -42,6 +54,8 @@ app
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
   })
+
+
 app.use('/', require('./routes'))
 app.use(cors());
 
