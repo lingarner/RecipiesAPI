@@ -1,7 +1,8 @@
-import express from 'express';
+import express, {Request, Response, NextFunction} from 'express';
+import routes from './routes/index';
 const app = express();
 const bodyParser = require("body-parser");
-const mongodb = require('./db/connection.ts');
+const mongodb = require('./db/connection.js');
 const port = process.env.PORT || 8080;
 require('dotenv').config();
 const cors = require('cors');
@@ -22,9 +23,9 @@ const config = {
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get('/', (req: any, res: any) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
+// app.get('/', (req: any, res: any) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
 
 // END AUTH0 PROCESS
 
@@ -39,19 +40,15 @@ const checkAuth = (req: any, res: any, next: any) => {
 app
   .use(cors())// Place cors middleware here
   .use(bodyParser.json())
-  .use((req: any, res: any, next: any) => {
+  .use((req: Request, res: Response, next: NextFunction) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
-    );
     res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
   })
+  .use('/', routes) //to routes index
 
 
-app.use('/', require('./routes'));
+
 
 mongodb.initDb((err: any) => {
   if (err) {

@@ -1,13 +1,17 @@
 // controllers/baseController.ts
 
 import { Request, Response } from 'express';
-import { ObjectId, InsertOneResult, UpdateResult, DeleteResult } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import { getDb } from '../db/connection';
 
 export async function getAll(req: Request, res: Response): Promise<void> {
     try {
         const collection = getDb().collection('recipies');
-        const result = await collection.find().toArray();
+        console.log(`collection data`);
+        console.log(JSON.stringify(collection))
+
+        const result = await collection.find(); //.toArray();
+
         res.setHeader('Content-Type', 'application/json');
         res.status(200).send(result);
     } catch (error: any) {
