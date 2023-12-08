@@ -15,7 +15,7 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.SECRET,
-  baseURL: 'https://recipesapi-2dkf.onrender.com',
+  baseURL: 'http://localhost:8080',
   clientID: '33WXz5xVS0de9dJmZjRrJLFPyZXVlFlh',
   issuerBaseURL: 'https://dev-4ha050c0hqua8uiq.us.auth0.com'
 };
@@ -39,6 +39,7 @@ const checkAuth = (req: any, res: any, next: any) => {
 }
 
 app
+  .use(cors())// Place cors middleware here
   .use(bodyParser.json())
   .use((req: any, res: any, next: any) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -50,9 +51,8 @@ app
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
   })
-  .use(cors()); // Place cors middleware here
 
-app.use('/api-docs', checkAuth, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/', require('./routes'));
 
 mongodb.initDb((err: any) => {
