@@ -5,11 +5,10 @@
     "description": "Recipe API for Team Project ",
     "version": "1.0.0"
   },
-  "host": "https://recipesapi-2dkf.onrender.com",
+  "host": "recipesapi-2dkf.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https, http"
   ],
   "paths": {
     "/": {
