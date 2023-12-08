@@ -21,26 +21,29 @@ export async function getAll(req: Request, res: Response): Promise<void> {
   }
   
 
-export async function getSingle(req: Request, res: Response): Promise<void> {
+  export async function getSingle(req: Request, res: Response): Promise<void> {
     try {
-        if (!ObjectId.isValid(req.params.id)) {
-            res.status(400).json('Must use a valid id to find a recipe.');
-            return;
-        }
-
-        const id = new ObjectId(req.params.id);
-        const collection = mongodb.getDb().collection(req.baseUrl.substring(1));
-        const result = await collection.findOne({ _id: id });
-
-        if (result) {
-            res.status(200).send(result);
-        } else {
-            throw new Error('Recipe not found.');
-        }
+      if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid id to find a recipe.');
+        return;
+      }
+  
+      const id = new ObjectId(req.params.id);
+      const collectionName = req.baseUrl.substring(1);
+      //@ts-ignore
+      const collection = mongodb.getDb().collection(collectionName);
+  
+      const result = await collection.findOne({ _id: id });
+  
+      if (result) {
+        res.status(200).json(result); // Send the result as JSON
+      } else {
+        throw new Error('Recipe not found.');
+      }
     } catch (error: any) {
-        res.status(500).json(error.message || 'Something went wrong');
+      res.status(500).json({ error: error.message || 'Something went wrong' });
     }
-}
+  }
 
 export async function deleteSingle(req: Request, res: Response): Promise<void> {
     try {
