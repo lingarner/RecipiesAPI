@@ -8,7 +8,7 @@
   "host": "recipesapi-2dkf.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https, http"
+    "https"
   ],
   "paths": {
     "/": {
