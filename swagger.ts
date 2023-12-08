@@ -16,7 +16,7 @@ const doc = {
   //   }
   // ],
   host: 'https://recipesapi-2dkf.onrender.com',
-  schemes: ['https']
+  schemes: ['https, http']
 };
 
 const outputFile = './swagger.json';
