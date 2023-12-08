@@ -6,6 +6,7 @@ const mongodb = require('./db/connection.ts');
 const port = process.env.PORT || 8080;
 require('dotenv').config();
 const cors = require('cors');
+import swaggerRouter from './routes/swag'; // Change the import
 
 // Auth0 authentication process
 const { auth } = require('express-openid-connect');
@@ -23,9 +24,9 @@ const config = {
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-// app.get('/', (req: any, res: any) => {
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
+app.get('/', (req: any, res: any) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
 
 // END AUTH0 PROCESS
 
@@ -39,12 +40,14 @@ const checkAuth = (req: any, res: any, next: any) => {
 
 app
   .use(cors())// Place cors middleware here
+  .use('/api-docs', checkAuth, swaggerRouter) // Change the route path
   .use(bodyParser.json())
   .use((req: Request, res: Response, next: NextFunction) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json');
     next();
   })
+
   .use('/', routes) //to routes index
 
 
