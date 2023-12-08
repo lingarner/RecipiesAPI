@@ -15,7 +15,7 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.SECRET,
-  baseURL: 'https://recipesapi-2dkf.onrender.com',
+  baseURL: process.env.BASE_URL,
   clientID: '33WXz5xVS0de9dJmZjRrJLFPyZXVlFlh',
   issuerBaseURL: 'https://dev-4ha050c0hqua8uiq.us.auth0.com'
 };
