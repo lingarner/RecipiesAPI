@@ -15,7 +15,7 @@ const doc = {
   //       description: "Live server"
   //   }
   // ],
-  host: 'https://recipesapi-2dkf.onrender.com',
+  host: 'recipesapi-2dkf.onrender.com',
   schemes: ['https, http']
 };
 
