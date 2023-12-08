@@ -15,8 +15,8 @@ const doc = {
   //       description: "Live server"
   //   }
   // ],
-  host: 'localhost:8080',
-  schemes: ['http']
+  host: 'https://recipesapi-2dkf.onrender.com',
+  schemes: ['https']
 };
 
 const outputFile = './swagger.json';
