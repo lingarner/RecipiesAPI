@@ -2,22 +2,24 @@
 
 import { Request, Response } from 'express';
 import { ObjectId } from 'mongodb';
-import { getDb } from '../db/connection';
+import * as mongodb from '../db/connection';
 
 export async function getAll(req: Request, res: Response): Promise<void> {
     try {
-        const collection = getDb().collection('recipies');
-        console.log(`collection data`);
-        console.log(JSON.stringify(collection))
-
-        const result = await collection.find(); //.toArray();
-
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).send(result);
+      const collectionName = req.baseUrl.substring(1);
+      //@ts-ignore
+      const collection = mongodb.getDb().collection(collectionName);
+  
+      // Use toArray() to convert the cursor to an array of documents
+      const result = await collection.find().toArray();
+  
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(result); // Send the results as JSON
     } catch (error: any) {
-        res.status(500).json(error.message || 'Something went wrong');
+      res.status(500).json({ error: error.message || 'Something went wrong' });
     }
-}
+  }
+  
 
 export async function getSingle(req: Request, res: Response): Promise<void> {
     try {
@@ -27,7 +29,7 @@ export async function getSingle(req: Request, res: Response): Promise<void> {
         }
 
         const id = new ObjectId(req.params.id);
-        const collection = getDb().collection('recipies');
+        const collection = mongodb.getDb().collection(req.baseUrl.substring(1));
         const result = await collection.findOne({ _id: id });
 
         if (result) {
@@ -48,7 +50,7 @@ export async function deleteSingle(req: Request, res: Response): Promise<void> {
         }
 
         const id = new ObjectId(req.params.id);
-        const result = await getDb().collection('recipies').deleteOne({ _id: id });
+        const result = await mongodb.getDb().collection(req.baseUrl.substring(1)).deleteOne({ _id: id });
 
         if (result.deletedCount === 1) {
             res.status(200).json({ message: 'Recipe deleted successfully.' });
@@ -71,7 +73,7 @@ export async function addSingle(req: Request, res: Response): Promise<void> {
             utensils: req.body.utensils
         };
 
-        const result = await getDb().collection('recipies').insertOne(recipe);
+        const result = await mongodb.getDb().collection(req.baseUrl.substring(1)).insertOne(recipe);
 
         if (result.acknowledged) {
             res.status(200).json({ message: 'Recipe added successfully.' });
@@ -100,7 +102,7 @@ export async function editSingle(req: Request, res: Response): Promise<void> {
         };
 
         const id = new ObjectId(req.params.id);
-        const result = await getDb().collection('recipies').replaceOne({ _id: id }, recipe);
+        const result = await mongodb.getDb().collection(req.baseUrl.substring(1)).replaceOne({ _id: id }, recipe);
 
         if (result.modifiedCount === 1) {
             res.status(200).json({ message: 'Recipe edited successfully.' });

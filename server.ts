@@ -2,7 +2,7 @@ import express, {Request, Response, NextFunction} from 'express';
 import routes from './routes/index';
 const app = express();
 const bodyParser = require("body-parser");
-const mongodb = require('./db/connection.js');
+const mongodb = require('./db/connection.ts');
 const port = process.env.PORT || 8080;
 require('dotenv').config();
 const cors = require('cors');

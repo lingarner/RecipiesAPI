@@ -1,12 +1,16 @@
 // LOCALHOST
 
-// get all breakfast, lunch, dinner, dessert 
+// get all breakfast, lunch, dinner, dessert
+
 ### breakfast
 GET http://localhost:8080/breakfast HTTP/1.1
 
 // get a breakfast by ID
+
+
+
 ### 
-GET http://localhost:8080/breakfast/6553f6855f9d2830f33ba5d2
+GET http://localhost:8080/breakfast/
 ### 
 GET http://localhost:8080/breakfast/6553f6855f9d2830f33ba5d3
 ### 
