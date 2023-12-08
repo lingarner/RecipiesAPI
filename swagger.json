@@ -1,32 +1,36 @@
 {
-  "openapi": "3.0.0",
+  "swagger": "2.0",
   "info": {
     "title": "Recipe API",
     "description": "Recipe API for Team Project ",
     "version": "1.0.0"
   },
-  "servers": [
-    {
-      "url": "http://localhost:8080/",
-      "description": "Local server"
-    },
-    {
-      "url": "https://recipesapi-2dkf.onrender.com",
-      "description": "Live server"
-    }
+  "host": "https://recipesapi-2dkf.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https",
+    "http"
   ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/breakfast/{id}": {
       "get": {
-        "description": "Get one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -35,18 +39,46 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "put": {
-        "description": "Edit one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
             "schema": {
-              "type": "string"
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
             }
           }
         ],
@@ -60,47 +92,16 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "delete": {
-        "description": "Delete one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -118,7 +119,10 @@
     },
     "/breakfast/": {
       "get": {
-        "description": "Get all the recipes",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -129,60 +133,55 @@
         }
       },
       "post": {
-        "description": "Add one recipe",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "Bad Request"
-          },
           "500": {
             "description": "Internal Server Error"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
           }
         }
       }
     },
     "/lunch/{id}": {
       "get": {
-        "description": "Get one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -191,18 +190,46 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "put": {
-        "description": "Edit one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
             "schema": {
-              "type": "string"
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
             }
           }
         ],
@@ -216,47 +243,16 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "delete": {
-        "description": "Delete one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -274,7 +270,10 @@
     },
     "/lunch/": {
       "get": {
-        "description": "Get all the recipes",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -285,7 +284,36 @@
         }
       },
       "post": {
-        "description": "Add one recipe",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -295,50 +323,19 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
           }
         }
       }
     },
     "/dinner/{id}": {
       "get": {
-        "description": "Get one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -347,18 +344,46 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "put": {
-        "description": "Edit one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
             "schema": {
-              "type": "string"
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
             }
           }
         ],
@@ -372,47 +397,16 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "delete": {
-        "description": "Delete one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -430,7 +424,10 @@
     },
     "/dinner/": {
       "get": {
-        "description": "Get all the recipes",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -441,7 +438,36 @@
         }
       },
       "post": {
-        "description": "Add one recipe",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -451,50 +477,19 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
           }
         }
       }
     },
     "/dessert/{id}": {
       "get": {
-        "description": "Get one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -503,18 +498,46 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "put": {
-        "description": "Edit one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
             "schema": {
-              "type": "string"
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
             }
           }
         ],
@@ -528,47 +551,16 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "delete": {
-        "description": "Delete one recipe",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -586,7 +578,10 @@
     },
     "/dessert/": {
       "get": {
-        "description": "Get all the recipes",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -597,7 +592,36 @@
         }
       },
       "post": {
-        "description": "Add one recipe",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ingredients": {
+                  "example": "any"
+                },
+                "recipeTitle": {
+                  "example": "any"
+                },
+                "prepTimeorbakingTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "utensils": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -607,35 +631,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ingredients": {
-                    "example": "any"
-                  },
-                  "recipeTitle": {
-                    "example": "any"
-                  },
-                  "prepTimeorbakingTime": {
-                    "example": "any"
-                  },
-                  "comments": {
-                    "example": "any"
-                  },
-                  "instructions": {
-                    "example": "any"
-                  },
-                  "utensils": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
           }
         }
       }

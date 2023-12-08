@@ -1,7 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const baseController = require('../controllers/baseController.js');
-const validator = require('../utilities/validation.js');
+import express, { Router } from 'express';
+import * as baseController from '../controllers/baseController';
+import * as validator from '../utilities/validation';
+
+const router: Router = express.Router();
 
 // get dessert by id
 router.get('/:id', baseController.getSingle);
@@ -16,7 +17,6 @@ router.post('/', validator.newRecipe, validator.checkValidation, baseController.
 router.put('/:id', validator.newRecipe, validator.checkValidation, baseController.editSingle);
 
 // delete one dessert
-router.delete('/:id', baseController.deleteSingle)
+router.delete('/:id', baseController.deleteSingle);
 
-
-module.exports = router;
+export default router;
