@@ -1,4 +1,4 @@
-const swaggerAutogen = require('swagger-autogen')({openapi: '3.0.0'});
+import swaggerAutogen from 'swagger-autogen';
 
 const doc = {
   info: {
@@ -15,6 +15,8 @@ const doc = {
         description: "Live server"
     }
   ],
+  // host: 'http://localhost:8080',
+  // schemes: ['http']
 };
 
 const outputFile = './swagger.json';
